@@ -8,6 +8,9 @@ class Terrain
   def print_word2
     puts "timmy222"
   end
+  def print_word2
+    puts "timmy222"
+  end
 end
 
 tim = Terrain.new
