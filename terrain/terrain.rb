@@ -15,7 +15,9 @@ class Terrain
   def plot_points()
     count = 0
     @plot_cord.each do |val|
-      p val
+       val.each {|cord|
+
+       }
       p count
       count +=1
     end
