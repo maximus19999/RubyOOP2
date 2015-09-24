@@ -1,16 +1,19 @@
 class Terrain
-  def print_word
-    puts "timmy"
+  attr_accessor :plot_size
+  attr_accessor :plot_cord
+
+
+  def read_data (data_in)# loads data and puts it into the plot_cord variable
+    input = File.open(data_in, File::RDONLY){|f| f.read }
+    @plot_cord =  input.lines.map{|l| l.split.map(&:to_i) }
   end
-  def print_word2
-    puts "timmy222"
-  end
-  
+
 
 end
 
 tim = Terrain.new
-tim.print_word
-tim.print_word2
-tim.print_word
-tim.print_word2
+
+tim.read_data ('C:/Users/max/Desktop/Reports PHP/Terrain.dat')
+p tim.plot_cord
+
+
