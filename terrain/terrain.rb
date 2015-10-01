@@ -1,9 +1,10 @@
-require_relative "point"
+require_relative "point"# get the point class
 
 class Terrain
   attr_accessor :plot_size
   attr_accessor :plot_cord
   attr_accessor :point_array
+  attr_accessor :average_height
 
   def read_data (data_in)# loads data and puts it into the plot_cord variable
     input = File.open(data_in, File::RDONLY){|f| f.read }
@@ -18,7 +19,6 @@ class Terrain
     @plot_cord.each do |val|
       y_count = 0
        val.each {|cord|
-
        }
       p x_count
        x_count +=1
@@ -34,14 +34,16 @@ class Terrain
         num_of_point +=1# add the number of points
       }
     }
-    puts ave_height/num_of_point# just for debug
+    @average_height = ave_height/num_of_point
+    #puts ave_height/num_of_point# just for debug
   end
 
 end
 
 tim = Terrain.new
 
-tim.read_data ('C:/Users/max/Desktop/Reports PHP/Terrain.dat')
+tim.read_data ('C:/Users/max/Desktop/Reports PHP/terrain.dat')
+puts "average height = " + tim.average_height.to_s
 
 
 
