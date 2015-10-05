@@ -1,12 +1,15 @@
 class SwimmingLocation
   attr_accessor :plot_cord
-  attr_accessor :possible_locations
-  def initialize(plot_co)
+  attr_accessor :best_location
+  attr_accessor :plot_size
+  def initialize(plot_co,plot_size)
+    @plot_cord = [0,0]
+    @best_location = [0,0]
     @plot_cord = plot_co
+    @best_location = [0,0,0,10000]#0's == x y size height
+    @plot_size = plot_size
   end
   def find_loc_for_pool
-    #possible_locations = []
-
     pool_y_loc = 0
     @plot_cord.each {|point|
       pool_x_loc = 0
@@ -17,36 +20,33 @@ class SwimmingLocation
       point.each {|x_point|
 
         while point[pool_x_loc] == point[pool_x_loc + pool_loc_size]#find the next point next to it
-          pool_loc_size +=1 # find potential pool size
-          #pool_y_loc_to_pass = pool_y_loc# pass out y location
-          #p point[pool_x_loc]
+          pool_loc_size += 1 # find potential pool size
+
           pool_y_loc_to_pass = pool_y_loc
           pool_x_loc_to_pass = pool_x_loc
           height_to_pass = point[pool_x_loc]
-          #p pool_y_loc
-          #p pool_x_loc
+
         end
         pool_x_loc += 1
-        #if pool_x_loc > 9# to stop checking the far right points
-          #break
-        #end
+
       }
 
       if pool_loc_size > 1# check that there is at least two blocks togther
-       # p "found"
-        #p pool_loc_size
-        if check_rest_of_space(pool_x_loc_to_pass,pool_y_loc_to_pass,pool_loc_size,height_to_pass)
-          #p pool_x_loc_to_pass
-          #p pool_y_loc_to_pass
-          #p pool_loc_size
-          #p height_to_pass
+        if pool_y_loc < @plot_size - 1 # make sure not to look past plot sizing
+          if check_rest_of_space(pool_x_loc_to_pass,pool_y_loc_to_pass,pool_loc_size,height_to_pass)
+            sort_best_location(pool_x_loc_to_pass,pool_y_loc_to_pass,pool_loc_size,height_to_pass)
+            #show_best_location
+          end
         end
-        #break
+
+
       end
       pool_y_loc += 1
 
+
     }
-    
+
+
 
 
   end
@@ -55,18 +55,10 @@ class SwimmingLocation
     size_count_y = 1#start at one to increment
     size_count_x = 1
     (size_of_pool-1).times {#minus 1 to start at right spot
-      #p size_of_pool
-      #p "doing"
-      #p @plot_cord[y+size_count_y][x]
-      #p x
-      #p y
-      if height == (@plot_cord[(y + size_count_y)][x])
-        #p @plot_cord[(y + size_count_y )][x].to_s
-        #p "x = " + (x + size_count_x).to_s + " y = "+ (y + size_count_y).to_s + " "+@plot_cord[y + size_count_y][x].to_s
-        #break
+      if height == @plot_cord[y + size_count_y][x]
         (size_of_pool-1).times {#minus 1 to start at right spot
-          if @plot_cord[(y + size_count_y)][(x + size_count_x)] == height
-            #p "x = " + (x + size_count_x).to_s + " y = "+ (y + size_count_y).to_s + " "+@plot_cord[(y + size_count_y)][x].to_s
+          if @plot_cord[y + size_count_y][x + size_count_x] == height
+            #pass first test
           else
             return false
           end
@@ -74,30 +66,30 @@ class SwimmingLocation
         }
 
       else
-      return false
+        return false
       end
 
       if size_count_y == size_of_pool - 1 # check to make sure size of pool is right
-        p "x = " + x.to_s + " y = " + y.to_s + " size = "+ size_of_pool.to_s + " height =" +height.to_s
+        #pass second test
         return true
-
       end
-
       size_count_y += 1
       size_count_x = 1
-      #if size_count_y == size_of_pool + 1
-        #p "pass"
-        #p x
-        #p y
-       # p "size of pool " + size_of_pool.to_s
-        #return true
-      #end
     }
     size_count_y = 1#start at one to increment
 
+  end
+  def sort_best_location(x,y,size,height)
+    if size > @best_location[2] ## check for size
+      @best_location = [x,y,size,height]
+    else
+      if @best_location[2] == size && @best_location[3] > height #if size is equal check height
+        @best_location = [x,y,size,height]
+      end
+    end
+  end
 
-    #size_count_y = 1#start at one to increment
-    #size_count_x = 1
-
+  def show_best_location
+   display =  "best location is (x = " + @best_location[0].to_s+ ", y = "+@best_location[1].to_s+") sized = "+@best_location[2].to_s+"*"+@best_location[2].to_s+" at height = "+@best_location[3].to_s
   end
 end
