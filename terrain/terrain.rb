@@ -1,4 +1,5 @@
 require_relative "point"# get the point class
+require_relative "swimming_location"# get the point class
 
 class Terrain
   attr_accessor :plot_size
@@ -6,9 +7,7 @@ class Terrain
   attr_accessor :point_array
   attr_accessor :average_height
   attr_accessor :points_array
-  #def initialize
-    #@points_array = []
-  #end
+
   def read_data (data_in)# loads data and puts it into the plot_cord variable
     input = File.open(data_in, File::RDONLY){|f| f.read }
     @plot_cord =  input.lines.map{|l| l.split.map(&:to_f) }#put cord into array
@@ -37,11 +36,10 @@ class Terrain
 
   def get_ave_height
     ave_height = 0
-    #num_of_point = 0# just to check and be sure that data input number given is not inaccurate
+
     @plot_cord.each{|val|
       val.each {|height|
         ave_height = ave_height + height# add the value of all points
-        #num_of_point +=1# add the number of points
       }
     }
     @average_height = ave_height/(@plot_size*@plot_size)
@@ -79,10 +77,11 @@ end
 tim = Terrain.new
 
 tim.read_data ('C:/Users/max/Desktop/Reports PHP/terrain.dat')#enter your file location as input
-
-p "standard deviation of all points = "+tim.get_standDeviation.to_s
-p "lowest point is ("+tim.get_lowest_point.x_loc.to_s+", "+tim.get_lowest_point.y_loc.to_s+") with a height of "+tim.get_lowest_point.height.to_s
-p "average height = " + tim.average_height.to_s
+swp = SwimmingLocation.new(tim.plot_cord)
+swp.find_loc_for_pool
+#p "standard deviation of all points = "+tim.get_standDeviation.to_s
+#p "lowest point is ("+tim.get_lowest_point.x_loc.to_s+", "+tim.get_lowest_point.y_loc.to_s+") with a height of "+tim.get_lowest_point.height.to_s
+#p "average height = " + tim.average_height.to_s
 
 
 
