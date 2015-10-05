@@ -43,7 +43,7 @@ class Terrain
       }
     }
     @average_height = ave_height/(@plot_size*@plot_size)
-    p @plot_size
+    #p @plot_size
 
   end
   def get_lowest_point
@@ -75,15 +75,7 @@ class Terrain
 
 end
 
-tim = Terrain.new
 
-tim.read_data ('C:/Users/max/Desktop/Reports PHP/terrain.dat')#enter your file location as input
-p "standard deviation of all points = "+tim.get_standDeviation.to_s
-p "lowest point is ("+tim.get_lowest_point.x_loc.to_s+", "+tim.get_lowest_point.y_loc.to_s+") with a height of "+tim.get_lowest_point.height.to_s
-p "average height = " + tim.average_height.to_s
-swp = SwimmingLocation.new(tim.plot_cord, tim.plot_size) # give data to swimming to find best spot
-swp.find_loc_for_pool #sort data
-p swp.show_best_location
 
 
 
