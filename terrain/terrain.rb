@@ -37,14 +37,14 @@ class Terrain
 
   def get_ave_height
     ave_height = 0
-    num_of_point = 0# just to check and be sure that data input number given is not inaccurate
+    #num_of_point = 0# just to check and be sure that data input number given is not inaccurate
     @plot_cord.each{|val|
       val.each {|height|
         ave_height = ave_height + height# add the value of all points
-        num_of_point +=1# add the number of points
+        #num_of_point +=1# add the number of points
       }
     }
-    @average_height = ave_height/num_of_point
+    @average_height = ave_height/(@plot_size*@plot_size)
 
   end
   def get_lowest_point
@@ -62,15 +62,27 @@ class Terrain
     }
     lowest_point = Point.new(x_co,y_co,min_height)
   end
+  def get_standDeviation
+    stand_dev = 0
+    ave_heigth = get_ave_height# get average height
+    @points_array.each {|point|
+      stand_dev = stand_dev + ((point.height - ave_heigth)**2)
+    }
+    stand_output = Math.sqrt(stand_dev/(@plot_size*@plot_size))
+    #p stand_output #for debug only
+
+
+  end
 
 end
 
 tim = Terrain.new
 
-tim.read_data ('C:/Users/max/Desktop/Reports PHP/terrain.dat')
-low_point = tim.get_lowest_point
-p low_point
+tim.read_data ('C:/Users/max/Desktop/Reports PHP/terrain.dat')#enter your file location as input
+
+p "standard deviation of all points = "+tim.get_standDeviation.to_s
+p "lowest point is ("+tim.get_lowest_point.x_loc.to_s+", "+tim.get_lowest_point.y_loc.to_s+") with a height of "+tim.get_lowest_point.height.to_s
 p "average height = " + tim.average_height.to_s
-#p tim.points_array[0]
+
 
 
