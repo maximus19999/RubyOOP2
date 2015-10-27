@@ -1,6 +1,5 @@
 require_relative "card"
 class Hand
-
   attr_accessor :cards_values
   attr_accessor :cards
   attr_accessor :max_num_cards
@@ -45,29 +44,7 @@ class Hand
     @cards_values[card.to_s]
 
   end
-
 end
-
-# module Evaluate_for_idiot_liar_light #using a module to impliment
-#   def eval_idiot_liar_light (cards, num_cards)
-#     max_min = get_high_low_cards(cards)
-#     (max_min[0].to_f + max_min[1])/num_cards# add to_f to convert to float
-#   end
-#   def get_high_low_cards(cards)
-#     max = 0
-#     min = 100
-#     cards.each { |card|
-#       if card.rank < min
-#         min = card.rank
-#       end
-#       if card.rank > max
-#         max = card.rank
-#       end
-#     }
-#     [max,min]
-#   end
-# end
-
 class EvaluateHands < Hand
   def initialize
     super()
@@ -140,7 +117,6 @@ class Spider < FiveHandedGames
   def initialize
     super()
     @evaluation_type = "median"
-
     @cards_values = {#to get value of card
                      "ace" => 0,
                      "two" => 0,

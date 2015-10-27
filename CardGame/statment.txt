@@ -1,0 +1,10 @@
+i have a hierachy of 
+Hand
+EvaluateHands
+TwoCardHands/FiveCardHands
+then all the indiviual card games on the same level. (spider, liar, light and Idiot).
+
+i put it in this order because of the order of needed functions. All Game hand classes need the Evaluate function but only needed the
+allocation of number of cards differing only two sorts. though the evaluate function did need to be slightly different for Spider.
+Hand was obiiously up the top because it was requireded to pass the greatest amount of functions to the lower classes.
+the only things i put in the Liar, light etc classes was the initailsation definition , as each Hand had different values for their alloted cards.

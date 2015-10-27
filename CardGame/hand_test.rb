@@ -11,7 +11,7 @@ class HandTest < Test::Unit::TestCase
     @tim4 = Card.new("two")
     @tim5 = Card.new("ace")
   end
-  def test_add_card
+  def test_add_card_two_card
     hand = Liar.new
     hand.add_card(@tim)
     assert_equal(hand.cards[0].name, "king", error_message="card failed to add")
