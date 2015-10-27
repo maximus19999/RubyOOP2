@@ -9,7 +9,7 @@ tim3 = Card.new("queen")
 tim4 = Card.new("two")
 tim5 = Card.new("ace")
 #puts tim.to_s
-hand = Spider.new
+hand = Liar.new
 #hand.printNow
 hand.add_card(tim)
 hand.add_card(tim2)
@@ -23,4 +23,4 @@ hand.add_card(tim5)
 #puts tim.rank
    #hand.contains?(tim)
 #hand.value(tim2)
-hand.evaluate
+puts hand.evaluate

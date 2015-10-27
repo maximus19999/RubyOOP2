@@ -16,11 +16,8 @@ class Hand
        @num_of_cards = @num_of_cards + 1
        @cards << card #put card into
      else
-       #puts "card already exists"
      end
-
     else
-      #puts "hand complete/card already exists"
     end
   end
   def complete?#check to see if hand has been allocated max number of cards
@@ -79,12 +76,11 @@ class EvaluateHands < Hand
     if @evaluation_type == "median"# for spider
       card_array = []
       @cards.each {|card|
-        card_array.push(card.rank)
+        card_array.push(card.rank)#add to array by rank
       }
       card_array.sort
-      card_array [2]#return median
-    end
-    if @evaluation_type == "high_low_ave"
+      card_array [2].to_s#return median
+    else @evaluation_type == "high_low_ave"
       max_min = get_high_low_cards()
       (max_min[0].to_f + max_min[1])/@max_num_cards# add to_f to convert to float
     end
@@ -144,6 +140,7 @@ class Spider < FiveHandedGames
   def initialize
     super()
     @evaluation_type = "median"
+
     @cards_values = {#to get value of card
                      "ace" => 0,
                      "two" => 0,
