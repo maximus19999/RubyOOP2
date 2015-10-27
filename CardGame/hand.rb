@@ -76,6 +76,14 @@ class EvaluateHands < Hand
     super()
   end
   def evaluate ()
+    if @evaluation_type == "median"# for spider
+      card_array = []
+      @cards.each {|card|
+        card_array.push(card.rank)
+      }
+      card_array.sort
+      card_array [2]#return median
+    end
     if @evaluation_type == "high_low_ave"
       max_min = get_high_low_cards()
       (max_min[0].to_f + max_min[1])/@max_num_cards# add to_f to convert to float
@@ -96,21 +104,21 @@ class EvaluateHands < Hand
   end
 end
 
-class Two_handed_games < EvaluateHands
+class TwoHandedGames < EvaluateHands
   def initialize
     super()
     @max_num_cards = 2
   end
 end
 
-class Five_handed_games < EvaluateHands
+class FiveHandedGames < EvaluateHands
   def initialize
     super()
     @max_num_cards = 5
   end
 end
 
-class Idiot < Two_handed_games
+class Idiot < TwoHandedGames
   def initialize
     super()
     @evaluation_type = "high_low_ave"
@@ -132,8 +140,66 @@ class Idiot < Two_handed_games
   end
 end
 
-class Spider
+class Spider < FiveHandedGames
   def initialize
-    
+    super()
+    @evaluation_type = "median"
+    @cards_values = {#to get value of card
+                     "ace" => 0,
+                     "two" => 0,
+                     "three" => 0,
+                     "four" => 0,
+                     "five" => 0,
+                     "six" => 0,
+                     "seven" => 0,
+                     "eight" => 0,
+                     "nine" => 0,
+                     "ten" => 0,
+                     "jack" => 3,
+                     "queen" => 2,
+                     "king" => 1,
+    }
+  end
+end
+class Liar < TwoHandedGames
+  def initialize
+    super()
+    @evaluation_type = "high_low_ave"
+    @cards_values = {#to get value of card
+                     "ace" => 13,
+                     "two" => 12,
+                     "three" => 11,
+                     "four" => 10,
+                     "five" => 9,
+                     "six" => 8,
+                     "seven" => 7,
+                     "eight" => 6,
+                     "nine" => 5,
+                     "ten" => 4,
+                     "jack" => 3,
+                     "queen" => 2,
+                     "king" => 1,
+    }
+  end
+end
+class Light < FiveHandedGames
+  def initialize
+    super()
+    @evaluation_type = "high_low_ave"
+    @cards_values = {#to get value of card
+                     "ace" => 1,
+                     "two" => 13,
+                     "three" => 12,
+                     "four" => 4,
+                     "five" => 3,
+                     "six" => 10,
+                     "seven" => 9,
+                     "eight" => 2,
+                     "nine" => 7,
+                     "ten" => 11,
+                     "jack" => 5,
+                     "queen" => 8,
+                     "king" => 1,
+    }
   end
 end
