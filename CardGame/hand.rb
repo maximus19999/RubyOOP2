@@ -4,10 +4,12 @@ class Hand
   attr_accessor :cards_values
   attr_accessor :cards
   attr_accessor :max_num_cards
+  attr_accessor :evaluation_type
   def initialize
     @num_of_cards = 0#set nuber of cards
+    @cards  = []#create empty card array
   end
-  def add_card(card)#####need to add check for card already existing
+  def add_card(card)
     if complete? == false #check that number of card hasnt been filled already or if it contains card
      if  contains?(card) == false
        set_card_value(card)
@@ -69,13 +71,15 @@ end
 #   end
 # end
 
-class Evaluate < Hand
+class EvaluateHands < Hand
   def initialize
     super()
   end
-  def evaluate_high_low_average_games ()
-    max_min = get_high_low_cards()
-    (max_min[0].to_f + max_min[1])/@max_num_cards# add to_f to convert to float
+  def evaluate ()
+    if @evaluation_type == "high_low_ave"
+      max_min = get_high_low_cards()
+      (max_min[0].to_f + max_min[1])/@max_num_cards# add to_f to convert to float
+    end
   end
   def get_high_low_cards()#get max and min
     max = 0
@@ -90,31 +94,26 @@ class Evaluate < Hand
     }
     [max,min]
   end
-
-
-
-
-
 end
-class Two_handed_games < Evaluate
+
+class Two_handed_games < EvaluateHands
   def initialize
     super()
     @max_num_cards = 2
   end
 end
-class Five_handed_games < Evaluate
+
+class Five_handed_games < EvaluateHands
   def initialize
     super()
     @max_num_cards = 5
   end
 end
 
-
 class Idiot < Two_handed_games
-  #include Evaluate_for_idiot_liar_light
   def initialize
     super()
-    @cards  = []
+    @evaluation_type = "high_low_ave"
     @cards_values = {#to get value of card
                      "ace" => 1,
                      "two" => 2,
@@ -131,69 +130,10 @@ class Idiot < Two_handed_games
                      "king" => 13,
     }
   end
-  
-
 end
-# class Liar <Hand
-#   # def initialize
-#   #
-#   # end
-#   def add_card(card)
-#
-#   end
-#   def complete?
-#
-#   end
-#   def contains?(card)
-#
-#   end
-#   def value(card)
-#
-#   end
-#   def evaluate
-#
-#   end
-#
-# end
-# class Light <Hand
-#   # def initialize
-#   #
-#   # end
-#   def add_card(card)
-#
-#   end
-#   def complete?
-#
-#   end
-#   def contains?(card)
-#
-#   end
-#   def value(card)
-#
-#   end
-#   def evaluate
-#
-#   end
-#
-# end
-# class Spider <Hand
-#   # def initialize
-#   #
-#   # end
-#   def add_card(card)
-#
-#   end
-#   def complete?
-#
-#   end
-#   def contains?(card)
-#
-#   end
-#   def value(card)
-#
-#   end
-#   def evaluate
-#
-#   end
-#
-# end
+
+class Spider
+  def initialize
+    
+  end
+end

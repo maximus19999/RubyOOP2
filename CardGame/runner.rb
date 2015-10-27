@@ -20,4 +20,4 @@ hand.add_card(tim2)
 #puts tim.rank
    #hand.contains?(tim)
 #hand.value(tim2)
-puts hand.evaluate_high_low_average_games
+puts hand.evaluate
