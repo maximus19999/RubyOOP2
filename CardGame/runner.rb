@@ -3,8 +3,19 @@ require_relative"hand"
 
 class Runner
 end
-tim = Card.new("ace")
-puts tim.to_s
+tim = Card.new("king")
+tim2 = Card.new("ace")
+#puts tim.to_s
 hand = Idiot.new
-hand.set_card_value(tim)
-
+#hand.printNow
+hand.add_card(tim)
+hand.add_card(tim2)
+hand.add_card(tim)
+hand.add_card(tim)
+hand.add_card(tim)
+hand.add_card(tim)
+# puts hand.max_num_cards
+#puts hand.set_card_value(tim)
+ puts hand.cards
+#puts tim.rank
+   hand.contains?(tim)

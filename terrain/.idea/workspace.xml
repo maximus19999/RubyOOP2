@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="terrain.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="terrain.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/terrain.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.02526003">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -56,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="point.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="point.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/point.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02526003">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1" column="17" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="17" />
               <folding />
             </state>
@@ -487,22 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swimming_location.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/terrain.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runner.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -513,8 +497,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/point.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02526003">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swimming_location.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/terrain.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02526003">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
