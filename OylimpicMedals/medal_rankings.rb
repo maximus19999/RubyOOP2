@@ -17,7 +17,23 @@ class MedalRankings
       @countrys << count
     }
   end
+  def most_golds#get the country with highest number of gold
+    most_gold_country = "xxx"
+    most_gold_count = 0
+    @countrys.each {|country|
+      if country.num_of_gold > most_gold_count
+        most_gold_count = country.num_of_gold
+        most_gold_country = country
+      end
+    }
+    most_gold_country
+  end
+  def average_pop#get average population
+    average = 0
+    @countrys.each {|country|
+      average = average + country.population
+    }
+    average = average/@countrys.size
+  end
 end
 
-t = MedalRankings.new("medals.txt")
-puts t.to_s(0)
