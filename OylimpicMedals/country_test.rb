@@ -1,8 +1,6 @@
 require 'test/unit'
 require_relative "country"
 class CountryTest < Test::Unit::TestCase
-
-
   def setup
     @count = Country.new("ARG", 1,1,1, 40000000)#get new country
   end

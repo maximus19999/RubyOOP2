@@ -18,10 +18,6 @@ class Country < Gdp
   attr_accessor :num_of_bronze
   attr_accessor :population
   attr_accessor :score_value
-
-
-
-
   def initialize(name, gold, silver, bronze, population)
     super()#initialise Gdp class to have access to hash map of gdps
     @name = name
