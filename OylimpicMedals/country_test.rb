@@ -12,4 +12,7 @@ class CountryTest < Test::Unit::TestCase
   def test_get_medal
     assert_equal(@count.num_of_gold, 1, error_message="input of medals not correct")#test get a medal count
   end
+  def test_load_gdp
+    assert_equal(@count.gdps_hash_map["AND"].to_i, 3491000000, error_message="input of medals not correct")#test get a medal count
+  end
 end

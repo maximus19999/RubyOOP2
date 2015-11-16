@@ -1,8 +1,6 @@
 require_relative "country"
 class MedalRankings
   attr_accessor :countrys
-  attr_accessor :gdps
-
   def initialize(data_to_read)
     read_data(data_to_read)
   end
@@ -36,9 +34,15 @@ class MedalRankings
     }
     average = average/@countrys.size
   end
-  def load_gdp_data(gpd_in)#load in gdps
-    input = File.open(gpd_in, File::RDONLY){|f| f.read }
-    @gdps = input.lines.map{|l| l.split.map(&:to_s) }#put countrys into array for sorting
+  def sort!
+    @countrys.each {|country|
+      country.score_value = country.score#give each country a score value
+    }
+    @countrys.sort! { |a,b| a.score_value <=> b.score_value } #sort by score
+    @countrys.reverse!
   end
 end
+t = MedalRankings.new("medals.txt")
+t.sort!
+puts t.countrys
 
