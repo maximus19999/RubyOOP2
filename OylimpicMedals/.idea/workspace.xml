@@ -14,14 +14,14 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OylimpicMedals@main.coverage" NAME="main Coverage Results" MODIFIED="1447712842350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
+    <SUITE FILE_PATH="coverage/OylimpicMedals@main.coverage" NAME="main Coverage Results" MODIFIED="1447712976914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@gdp.coverage" NAME="gdp Coverage Results" MODIFIED="1447706001708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@Run_test__MedalRankingTest___OylimpicMedals.coverage" NAME="Run test 'MedalRankingTest': OylimpicMedals Coverage Results" MODIFIED="1447703195459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@test_load_gdp__OylimpicMedals.coverage" NAME="test_load_gdp: OylimpicMedals Coverage Results" MODIFIED="1447706413435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@Run_test__CountryTest___OylimpicMedals.coverage" NAME="Run test 'CountryTest': OylimpicMedals Coverage Results" MODIFIED="1447703183532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@test_ave_pop__OylimpicMedals.coverage" NAME="test_ave_pop: OylimpicMedals Coverage Results" MODIFIED="1447702960900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
-    <SUITE FILE_PATH="coverage/OylimpicMedals@medal_rankings.coverage" NAME="medal_rankings Coverage Results" MODIFIED="1447712474355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
-    <SUITE FILE_PATH="coverage/OylimpicMedals@country.coverage" NAME="country Coverage Results" MODIFIED="1447707175686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
+    <SUITE FILE_PATH="coverage/OylimpicMedals@medal_rankings.coverage" NAME="medal_rankings Coverage Results" MODIFIED="1447712979531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
+    <SUITE FILE_PATH="coverage/OylimpicMedals@country.coverage" NAME="country Coverage Results" MODIFIED="1447712974268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@test_get_medal__OylimpicMedals.coverage" NAME="test_get_medal: OylimpicMedals Coverage Results" MODIFIED="1447701840688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@test_most_gold__OylimpicMedals.coverage" NAME="test_most_gold: OylimpicMedals Coverage Results" MODIFIED="1447703168716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
     <SUITE FILE_PATH="coverage/OylimpicMedals@test_to_s__OylimpicMedals.coverage" NAME="test_to_s: OylimpicMedals Coverage Results" MODIFIED="1447701780052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="OylimpicMedals" />
@@ -35,20 +35,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="country.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="country.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/country.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3837472">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="medal_rankings.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="medal_rankings.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/medal_rankings.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.65462756">
               <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
               <folding />
             </state>
@@ -172,7 +172,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CardGame" />
     <property name="recentsLimit" value="5" />
   </component>
-  <component name="RunManager" selected="Ruby.main">
+  <component name="RunManager" selected="Ruby.medal_rankings">
     <configuration default="false" name="main" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="OylimpicMedals" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -377,8 +377,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.main" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.medal_rankings" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.medal_rankings" />
+        <item index="1" class="java.lang.String" itemvalue="Ruby.main" />
         <item index="2" class="java.lang.String" itemvalue="Ruby.country" />
         <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_load_gdp: OylimpicMedals" />
         <item index="4" class="java.lang.String" itemvalue="Ruby.gdp" />
@@ -427,14 +427,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/country_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -451,18 +443,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/medal_rankings.rb">
+    <entry file="file://$PROJECT_DIR$/country.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/country.rb">
+    <entry file="file://$PROJECT_DIR$/main.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3837472">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/medal_rankings.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65462756">
+          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
           <folding />
         </state>
       </provider>

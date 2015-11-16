@@ -1,0 +1,9 @@
+i managed to get all funtionality of the requirements working i do believe.
+i chose to make an extra GDP class that is a super class of the Country so all Country classes would have access to the GDP hash map
+for there score calculations
+
+i added a varible of score value to the country class to make the sorting easier, and simpler.
+my medalRanings class handles all of the computations pretty much for display purposes and also includes the function to load in the 
+data from the medal.txt file.
+i tried to keep all localised funtions to each class seperate and simple to avoid any cross over between the classes, trying to avoid lag
+  
