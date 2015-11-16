@@ -11,26 +11,12 @@ class Country
     @num_of_silver = silver
     @num_of_bronze = bronze
     @population = population
-
-
   end
-  def read_data ()# loads data and puts it into the plot_cord variable
-    input = File.open("medals.txt", File::RDONLY){|f| f.read }
-    @countrys =  input.lines.map{|l| l.split.map(&:to_s) }#put cord into array
-    # @plot_size = @plot_cord[0][0]#get the size of the matrix
-    # @plot_cord.shift#remove size from array to leave only cord
-    # plot_points
-    # get_ave_height# get the average height.
-
+  def to_s
+    @name+", "+@num_of_gold.to_s+", "+@num_of_silver.to_s+", "+@num_of_bronze.to_s+", "+@population.to_s
   end
+
 end
 
 
-t = Country.new
-t.read_data
 
-puts t.countrys[0][0]
-puts t.countrys[0][1]
-puts t.countrys[0][2]
-puts t.countrys[0][3]
-puts t.countrys[0][4]
