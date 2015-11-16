@@ -39,8 +39,7 @@ class Country < Gdp
 end
 
 
- # t = Country.new("USA", 42,56,20, 40000000)#get new country
- # puts t.score
+
 
 
 

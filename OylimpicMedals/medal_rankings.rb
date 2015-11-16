@@ -1,7 +1,7 @@
 require_relative "country"
 class MedalRankings
   attr_accessor :countrys
-  def initialize(data_to_read)
+  def initialize(data_to_read)#reads in data
     read_data(data_to_read)
   end
   def to_s(array_num)
@@ -39,10 +39,18 @@ class MedalRankings
       country.score_value = country.score#give each country a score value
     }
     @countrys.sort! { |a,b| a.score_value <=> b.score_value } #sort by score
-    @countrys.reverse!
+    @countrys.reverse!#reverse for decending order
+  end
+  def each_single_gold_winner
+    single_gold_winners = []
+    @countrys.each {|country|
+      if country.num_of_gold == 1 and country.num_of_silver == 0 and country.num_of_bronze == 0
+        single_gold_winners << country
+      end
+    }
+    single_gold_winners.sort! { |a,b| a.name <=> b.name} #sort by score
   end
 end
-t = MedalRankings.new("medals.txt")
-t.sort!
-puts t.countrys
+
+
 
