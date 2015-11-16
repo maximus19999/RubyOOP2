@@ -5,6 +5,9 @@ class MedalRankings
   def initialize(data_to_read)
     read_data(data_to_read)
   end
+  def to_s(array_num)
+    @countrys[array_num].to_s
+  end
   def read_data (data_in)# loads data and puts it into the countrys variable
     @countrys = []#initialise empty array
     input = File.open(data_in, File::RDONLY){|f| f.read }
@@ -13,11 +16,8 @@ class MedalRankings
       count = Country.new(country[0],country[1].to_i,country[2].to_i ,country[3].to_i ,country[4].to_i)
       @countrys << count
     }
-
-
-
   end
 end
 
 t = MedalRankings.new("medals.txt")
-puts t.countrys[0].to_s
+puts t.to_s(0)
